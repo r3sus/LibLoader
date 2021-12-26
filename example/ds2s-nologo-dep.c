@@ -2,7 +2,8 @@
 
 void main1()
 {
-*(BYTE*)0x141604DFA = 0x01;
+void *base_addr = GetModuleHandle(NULL);
+*(byte*)(base_addr + 0x1604DFA) = 0x01;
 }
 	
 BOOL APIENTRY DllMain(HMODULE mod, DWORD reason,
